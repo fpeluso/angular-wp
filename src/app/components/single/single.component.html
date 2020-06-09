@@ -1,0 +1,4 @@
+<p>single works!</p>
+<h1>{{post && post.title ? post.title.rendered : "..."}}</h1>
+<div [innerHtml]="post.content.rendered" *ngIf="post && post.content"></div>
+<p *ngIf="post && post.date">{{post.date | date:'longDate'}}</p>
