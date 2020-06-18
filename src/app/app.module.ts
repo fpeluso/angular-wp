@@ -11,6 +11,7 @@ import { SingleComponent } from './components/single/single.component';
 
 import { PostsService } from './services/posts.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { EscapeHtmlPipe } from './pipes/keep-html.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     CategoryComponent,
     HeaderComponent,
     FooterComponent,
-    SingleComponent
+    SingleComponent,
+    EscapeHtmlPipe
   ],
   imports: [
     BrowserModule,

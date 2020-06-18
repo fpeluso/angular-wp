@@ -4,6 +4,8 @@ import { PostsService } from '../../services/posts.service';
 
 import { Post } from '../../interfaces/post';
 import { Subscription } from 'rxjs';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser'
+import { EscapeHtmlPipe } from '../../pipes/keep-html.pipe'
 
 @Component({
   selector: 'app-single',
@@ -15,7 +17,7 @@ export class SingleComponent implements OnInit {
   post: Post;
   activeRoute: Subscription;
   postSlug: string;
-  constructor(private route: ActivatedRoute, private postsService: PostsService) { }
+  constructor(private route: ActivatedRoute, private postsService: PostsService, private sanitized: DomSanitizer) { }
 
   ngOnInit(): void {
     this.activeRoute = this.route.params.subscribe(params => {
