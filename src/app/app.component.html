@@ -1,9 +1,14 @@
-<h1>Angular Router App</h1>
+<div class="row">
+  <div class="col-xl-6">
+    <h1>Wordpress Blog!</h1>
+  </div>
+</div>
+<div class="row" style="margin-bottom: 15px;">
+  <div class="col-xl-6">
+    <a routerLink="/posts" routerLinkActive="active">View all posts</a>
+  </div>
+</div>
 <!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
-<nav>
-  <ul>
-    <li><a routerLink="/category" routerLinkActive="active">category</a></li>
-  </ul>
-</nav>
+
 <!-- The routed views render in the <router-outlet>-->
 <router-outlet></router-outlet>

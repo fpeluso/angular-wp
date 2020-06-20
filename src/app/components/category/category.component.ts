@@ -10,18 +10,9 @@ import { Post } from '../../interfaces/post';
 })
 export class CategoryComponent implements OnInit {
 
-  posts: Array<Post>;
-  constructor(private postsService: PostsService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.loadPosts();
-  }
-  loadPosts() {
-    this.postsService.loadPosts().subscribe(
-      response => {
-        this.posts = response;
-      }
-    );
-  }
 
+  }
 }
